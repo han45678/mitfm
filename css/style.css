@@ -182,7 +182,7 @@ header .wrapper ol li#shopping-cart .content {
   display: none;
   position: absolute;
   width: 320px;
-  height: 400px;
+  height: auto;
   background-color: rgba(0, 0, 0, 0.7);
   margin-top: 5px;
   border-radius: 5px;
