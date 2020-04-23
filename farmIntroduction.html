@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>小農點點</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+    <div id="load"></div>
+    <header id="header">
+        <div class="wrapper">
+            <a href="./index.html">
+                <div id="logo">
+                    <img src="./image/logo.png" alt="小農點點">
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./allProducts.html">購買</a>
+                    </li>
+                    <li>
+                        <a href="./promotions.html">最新消息</a>
+                    </li>
+                    <li>
+                        <a href="./about.html">關於我們</a>
+                    </li>
+                    <li class="mobile_menu">
+                        <h3>如何購買<i class="fas fa-angle-down"></i></h3>
+                        <ul>
+                            <li><a href="./memberFAQ.html">會員常見問題</a></li>
+                            <li><a href="./productFAQ.html">產品常見問題</a></li>
+                            <li><a href="./shoppingFAQ.html">購物常見問題</a></li>
+                            <li><a href="./deliveryNote.html">配送取貨說明</a></li>
+                            <li><a href="./returnInstructions.html">退貨退款說明</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile_menu">
+                        <h3>會員服務<i class="fas fa-angle-down"></i></h3>
+                        <ul>
+                            <li><a href="./terms.html">使用條款</a></li>
+                            <li><a href="./privacy.html">隱私權政策</a></li>
+                            <li><a href="./consumer.html">消費者權益</a></li>
+                            <li><a href="./responsibility.html">責任或免責說明</a></li>
+                            <li><a href="./platformTrading.html">平台交易相關法規</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile_menu">
+                        <h3>小農招募<i class="fas fa-angle-down"></i></h3>
+                        <ul>
+                            <li><a href="./join.html">加入小農行列</a></li>
+                            <li><a href="./message.html">線上留言</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <ol>
+                <li>
+                    <a href=""><i class="fas fa-user"></i></a>
+                </li>
+                <li id="shopping-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div class="content">
+                        <div class="checklist">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>照片</td>
+                                        <td>品項</td>
+                                        <td>單位</td>
+                                        <td>數量</td>
+                                        <td>價格</td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="cart-photo">
+                                            <div class="photo">
+                                                <img src="./image/product.jpg" alt="">
+                                            </div>
+                                        </td>
+                                        <td class="name" data-th="品名:">
+                                            <span class="text">愛文芒果</span>
+                                        </td>
+                                        <td class="unit" data-th="規格:">
+                                            <span class="text">6顆/盒</span>
+                                        </td>
+                                        <td class="quantity" data-th="數量:">
+                                            <span class="text">3</span>
+                                        </td>
+                                        <td class="price" data-th="價格:">
+                                            <span class="text">500元</span>
+                                            <span class="text"><span class="dividend">F</span>50</span>
+                                        </td>
+                                        <td class="delete">
+                                            <i class="far fa-trash-alt"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cart-photo">
+                                            <div class="photo">
+                                                <img src="./image/product.jpg" alt="">
+                                            </div>
+                                        </td>
+                                        <td class="name" data-th="品名:">
+                                            <span class="text">愛文芒果</span>
+                                        </td>
+                                        <td class="unit" data-th="規格:">
+                                            <span class="text">6顆/盒</span>
+                                        </td>
+                                        <td class="quantity" data-th="數量:">
+                                            <span class="text">3</span>
+                                        </td>
+                                        <td class="price" data-th="價格:">
+                                            <span class="text">500元</span>
+                                            <span class="text"><span class="dividend">F</span>50</span>
+                                        </td>
+                                        <td class="delete">
+                                            <i class="far fa-trash-alt"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cart-photo">
+                                            <div class="photo">
+                                                <img src="./image/product.jpg" alt="">
+                                            </div>
+                                        </td>
+                                        <td class="name" data-th="品名:">
+                                            <span class="text">愛文芒果</span>
+                                        </td>
+                                        <td class="unit" data-th="規格:">
+                                            <span class="text">6顆/盒</span>
+                                        </td>
+                                        <td class="quantity" data-th="數量:">
+                                            <span class="text">3</span>
+                                        </td>
+                                        <td class="price" data-th="價格:">
+                                            <span class="text">500元</span>
+                                            <span class="text"><span class="dividend">F</span>50</span>
+                                        </td>
+                                        <td class="delete">
+                                            <i class="far fa-trash-alt"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cart-photo">
+                                            <div class="photo">
+                                                <img src="./image/product.jpg" alt="">
+                                            </div>
+                                        </td>
+                                        <td class="name" data-th="品名:">
+                                            <span class="text">愛文芒果</span>
+                                        </td>
+                                        <td class="unit" data-th="規格:">
+                                            <span class="text">6顆/盒</span>
+                                        </td>
+                                        <td class="quantity" data-th="數量:">
+                                            <span class="text">3</span>
+                                        </td>
+                                        <td class="price" data-th="價格:">
+                                            <span class="text">500元</span>
+                                            <span class="text"><span class="dividend">F</span>50</span>
+                                        </td>
+                                        <td class="delete">
+                                            <i class="far fa-trash-alt"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cart-photo">
+                                            <div class="photo">
+                                                <img src="./image/product.jpg" alt="">
+                                            </div>
+                                        </td>
+                                        <td class="name" data-th="品名:">
+                                            <span class="text">愛文芒果</span>
+                                        </td>
+                                        <td class="unit" data-th="規格:">
+                                            <span class="text">6顆/盒</span>
+                                        </td>
+                                        <td class="quantity" data-th="數量:">
+                                            <span class="text">3</span>
+                                        </td>
+                                        <td class="price" data-th="價格:">
+                                            <span class="text">500元</span>
+                                            <span class="text"><span class="dividend">F</span>50</span>
+                                        </td>
+                                        <td class="delete">
+                                            <i class="far fa-trash-alt"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cart-photo">
+                                            <div class="photo">
+                                                <img src="./image/product.jpg" alt="">
+                                            </div>
+                                        </td>
+                                        <td class="name" data-th="品名:">
+                                            <span class="text">愛文芒果</span>
+                                        </td>
+                                        <td class="unit" data-th="規格:">
+                                            <span class="text">6顆/盒</span>
+                                        </td>
+                                        <td class="quantity" data-th="數量:">
+                                            <span class="text">3</span>
+                                        </td>
+                                        <td class="price" data-th="價格:">
+                                            <span class="text">500元</span>
+                                            <span class="text"><span class="dividend">F</span>50</span>
+                                        </td>
+                                        <td class="delete">
+                                            <i class="far fa-trash-alt"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cart-photo">
+                                            <div class="photo">
+                                                <img src="./image/product.jpg" alt="">
+                                            </div>
+                                        </td>
+                                        <td class="name" data-th="品名:">
+                                            <span class="text">愛文芒果</span>
+                                        </td>
+                                        <td class="unit" data-th="規格:">
+                                            <span class="text">6顆/盒</span>
+                                        </td>
+                                        <td class="quantity" data-th="數量:">
+                                            <span class="text">3</span>
+                                        </td>
+                                        <td class="price" data-th="價格:">
+                                            <span class="text">500元</span>
+                                            <span class="text"><span class="dividend">F</span>50</span>
+                                        </td>
+                                        <td class="delete">
+                                            <i class="far fa-trash-alt"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cart-photo">
+                                            <div class="photo">
+                                                <img src="./image/product.jpg" alt="">
+                                            </div>
+                                        </td>
+                                        <td class="name" data-th="品名:">
+                                            <span class="text">愛文芒果</span>
+                                        </td>
+                                        <td class="unit" data-th="規格:">
+                                            <span class="text">6顆/盒</span>
+                                        </td>
+                                        <td class="quantity" data-th="數量:">
+                                            <span class="text">3</span>
+                                        </td>
+                                        <td class="price" data-th="價格:">
+                                            <span class="text">500元</span>
+                                            <span class="text"><span class="dividend">F</span>50</span>
+                                        </td>
+                                        <td class="delete">
+                                            <i class="far fa-trash-alt"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cart-photo">
+                                            <div class="photo">
+                                                <img src="./image/product.jpg" alt="">
+                                            </div>
+                                        </td>
+                                        <td class="name" data-th="品名:">
+                                            <span class="text">愛文芒果</span>
+                                        </td>
+                                        <td class="unit" data-th="規格:">
+                                            <span class="text">6顆/盒</span>
+                                        </td>
+                                        <td class="quantity" data-th="數量:">
+                                            <span class="text">3</span>
+                                        </td>
+                                        <td class="price" data-th="價格:">
+                                            <span class="text">500元</span>
+                                            <span class="text"><span class="dividend">F</span>50</span>
+                                        </td>
+                                        <td class="delete">
+                                            <i class="far fa-trash-alt"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cart-photo">
+                                            <div class="photo">
+                                                <img src="./image/product.jpg" alt="">
+                                            </div>
+                                        </td>
+                                        <td class="name" data-th="品名:">
+                                            <span class="text">愛文芒果</span>
+                                        </td>
+                                        <td class="unit" data-th="規格:">
+                                            <span class="text">6顆/盒</span>
+                                        </td>
+                                        <td class="quantity" data-th="數量:">
+                                            <span class="text">3</span>
+                                        </td>
+                                        <td class="price" data-th="價格:">
+                                            <span class="text">500元</span>
+                                            <span class="text"><span class="dividend">F</span>50</span>
+                                        </td>
+                                        <td class="delete">
+                                            <i class="far fa-trash-alt"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <span class="prompt">請向下滑動<i class="far fa-arrow-alt-circle-down"></i></span>
+                        <a class="go-shopping-cart" href="./shoppingList.html"><button>前往結帳</button></a>
+                    </div>
+                </li>
+                <li>
+                    <a href=""><i class="fas fa-qrcode"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fas fa-search"></i></a>
+                </li>
+            </ol>
+            <button id="menu">
+                <span class="icon"></span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <div id="farmIntroduction">
+            <div id="banner">
+                <div class="photo">
+                    <img src="./image/product.jpg" alt="小農點點">
+                </div>
+                <div class="text">
+                    <h2>Welcome</h2>
+                    <h3>新駐小農</h3>
+                </div>
+            </div>
+            <div class="wrapper container-fluid">
+                <div class="row introduction">
+                    <div class="col-12 col-lg-6 photo">
+                        <img src="https://cdn.pixabay.com/photo/2019/09/12/22/45/farm-4472771_960_720.jpg" alt="">
+                    </div>
+                    <div class="col-12 col-lg-6 text">
+                        <h2>開心農場</h2>
+                        <p>
+                            青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
+                        </p>
+                    </div>
+                </div>
+                <div id="tags" class="row">
+                    <div class="col-12 col-lg-6">
+                        <h3>
+                            TAGS
+                        </h3>
+                        <ul>
+                            <li>吃得安心</li>
+                            <li>品質優良</li>
+                            <li>無農藥</li>
+                            <li>有機栽培</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <img src="https://c.pxhere.com/photos/99/2e/children_love_friends_hand_flowers_meadow_forest_walk-775838.jpg!d"
+                            alt="小農點點">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gray">
+            <div id="userProducts" class="wrapper">
+                <h3 class="text-center">熱門商品</h3>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="photo">
+                            <img src="./image/product.jpg" alt="小農點點">
+                        </div>
+                        <div class="text">
+                            <h4>愛文芒果</h4>
+                            <p>產地：開心農場</p>
+                            <p>
+                                價格：100元
+                            </p>
+                            <p>產地：開心農場</p>
+                            <p class="red">
+                                紅利加購：8點+50元
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="photo">
+                            <img src="./image/product.jpg" alt="小農點點">
+                        </div>
+                        <div class="text">
+                            <h4>愛文芒果</h4>
+                            <p>產地：開心農場</p>
+                            <p>
+                                價格：100元
+                            </p>
+                            <p>產地：開心農場</p>
+                            <p class="red">
+                                紅利加購：8點+50元
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="photo">
+                            <img src="./image/product.jpg" alt="小農點點">
+                        </div>
+                        <div class="text">
+                            <h4>愛文芒果</h4>
+                            <p>產地：開心農場</p>
+                            <p>
+                                價格：100元
+                            </p>
+                            <p>產地：開心農場</p>
+                            <p class="red">
+                                紅利加購：8點+50元
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="photo">
+                            <img src="./image/product.jpg" alt="小農點點">
+                        </div>
+                        <div class="text">
+                            <h4>愛文芒果</h4>
+                            <p>產地：開心農場</p>
+                            <p>
+                                價格：100元
+                            </p>
+                            <p>產地：開心農場</p>
+                            <p class="red">
+                                紅利加購：8點+50元
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="photo">
+                            <img src="./image/product.jpg" alt="小農點點">
+                        </div>
+                        <div class="text">
+                            <h4>愛文芒果</h4>
+                            <p>產地：開心農場</p>
+                            <p>
+                                價格：100元
+                            </p>
+                            <p>產地：開心農場</p>
+                            <p class="red">
+                                紅利加購：8點+50元
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <button class="next"><i class="fas fa-chevron-circle-left"></i></button>
+                <button class="prev"><i class="fas fa-chevron-circle-right"></i></button>
+            </div>
+        </div>
+        <div id="quality" class="content">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="item col-xl-3 col-md-6 col-6">
+                        <img src="./image/q1.png" alt="小農點點">
+                        <div class="title">
+                            <h3>10%高品質</h3>
+                        </div>
+                        <p>
+                            限量供應小農10%的外銷商品
+                        </p>
+                    </div>
+                    <div class="item col-xl-3 col-md-6 col-6">
+                        <img src="./image/q4.png" alt="小農點點">
+                        <div class="title">
+                            <h3>QR碼身分證</h3>
+                        </div>
+                        <p>
+                            每項產品皆有完整QR碼身分履歷
+                        </p>
+                    </div>
+                    <div class="item col-xl-3 col-md-6 col-6">
+                        <img src="./image/q3.png" alt="小農點點">
+                        <div class="title">
+                            <h3>紙箱回收</h3>
+                        </div>
+                        <p>
+                            友善環境，回收無污損包裝箱享折扣
+                        </p>
+                    </div>
+                    <div class="item col-xl-3 col-md-6 col-6">
+                        <img src="./image/q2.png" alt="小農點點">
+                        <div class="title">
+                            <h3>無電子發票</h3>
+                        </div>
+                        <p>
+                            本站小農產品，不提供電子及紙本發票
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper">
+            <div class="footer_menu">
+                <ul>
+                    <li>
+                        <h3>如何購買</h3>
+                    </li>
+                    <li><a href="./memberFAQ.html">會員常見問題</a></li>
+                    <li><a href="./productFAQ.html">產品常見問題</a></li>
+                    <li><a href="./shoppingFAQ.html">購物常見問題</a></li>
+                    <li><a href="./deliveryNote.html">配送取貨說明</a></li>
+                    <li><a href="./returnInstructions.html">退貨退款說明</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <h3>會員服務</h3>
+                    </li>
+                    <li><a href="./terms.html">使用條款</a></li>
+                    <li><a href="./privacy.html">隱私權政策</a></li>
+                    <li><a href="./consumer.html">消費者權益</a></li>
+                    <li><a href="./responsibility.html">責任或免責說明</a></li>
+                    <li><a href="./platformTrading.html">平台交易相關法規</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <h3>小農招募</h3>
+                    </li>
+                    <li><a href="./join.html">加入小農行列</a></li>
+                    <li><a class="green" href="./message.html">線上留言</a></li>
+                </ul>
+
+            </div>
+            <div class="footer_sub_menu">
+                <ul>
+                    <li>
+                        <ol>
+                            <li>
+                                <a href="https://www.facebook.com/groups/MITFM">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fab fa-google-plus"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/explore/tags/%E5%B0%8F%E8%BE%B2%E9%BB%9E%E9%BB%9E/?hl=zh-tw">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <div id="copyright">
+            <div class="wrapper">
+                <h3>Copyright © 2019 little farmer Inc. 保留一切權利。</h3>
+                <ol class="language">
+                    <li>
+                        <a href="">
+                            <img src="./image/taiwan.png" alt="中文">
+                            <span class="text">中文</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./image/uk.png" alt="Eng">
+                            <span class="text">Eng</span>
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/imgLiquid-min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/ui.js"></script>
+</body>
+
+</html>
