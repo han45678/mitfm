@@ -20,6 +20,12 @@
             </a>
             <nav>
                 <ul>
+                    <li id="searchBar">
+                        <div class="wrapper">
+                            <input type="text">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                    </li>
                     <li>
                         <a href="./allProducts.html">購買</a>
                     </li>
@@ -59,8 +65,25 @@
                 </ul>
             </nav>
             <ol>
-                <li>
-                    <a href=""><i class="fas fa-user"></i></a>
+                <li id="user">
+                    <i class="fas fa-user"></i>
+                    <div class="content">
+                        <a class="noLogIn" href="./logoin.html">尚未登入</a>
+                        <ul>
+                            <li>
+                                <a href="./memberProfile.html"><i class="fas fa-user"></i>會員資訊</a>
+                            </li>
+                            <li>
+                                <a href="./order.html"><i class="fas fa-server"></i>訂單查詢</a>
+                            </li>
+                            <li>
+                                <a href="./track.html"><i class="fas fa-heart"></i>追蹤小農</a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fas fa-sign-out-alt"></i>登出</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li id="shopping-cart">
                     <i class="fas fa-shopping-cart"></i>
@@ -315,11 +338,11 @@
                         <a class="go-shopping-cart" href="./shoppingList.html"><button>前往結帳</button></a>
                     </div>
                 </li>
-                <li>
-                    <a href=""><i class="fas fa-qrcode"></i></a>
+                <li id="loginProductButton">
+                    <i class="fas fa-qrcode"></i>
                 </li>
-                <li>
-                    <a href=""><i class="fas fa-search"></i></a>
+                <li id="openSearchBar">
+                    <i class="fas fa-search"></i>
                 </li>
             </ol>
             <button id="menu">
@@ -373,12 +396,12 @@
                         <div class="delivery">
                             <label class="title">送貨時段:</label>
                             <div class="content">
-                                <label><input type="radio" name="delivery" value="morning">早上09:00~12:00</label>
-                                <label><input type="radio" name="delivery" value="afternoon">下午13:00~18:00</label>
-                                <label><input type="radio" name="delivery" value="allDay" checked>整天</label>
+                                <label><input type="radio" name="delivery" value="morning"><span class="period">早上09:00~12:00</span></label>
+                                <label><input type="radio" name="delivery" value="afternoon"><span class="period">下午13:00~18:00</span></label>
+                                <label><input type="radio" name="delivery" value="allDay" checked><span class="period">整天</span></label>
                             </div>
                         </div>
-                        <div id="paymentMethod">
+                        <!-- <div id="paymentMethod">
                             <h4>請選擇付款方式</h4>
                             <div class="transfer">
                                 <label class="title">付款方式:</label>
@@ -394,7 +417,7 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div id="button">
                         <a href="./shoppingList.html">上一頁</a>
@@ -618,9 +641,80 @@
             </div>
         </div>
     </footer>
+    <div id="loginProduct">
+        <div class="content">
+            <button id="times"><i class="far fa-times-circle"></i></button>
+            <div class="container-fluid scrollBar">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 photo">
+                        <pre class="text-center">您購買的商品：</pre>
+                        <h2 class="text-center">摩天嶺－茂谷柑禮盒</h2>
+                        <div class="slick">
+                            <div class="item">
+                                <img src="./image/product.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="./image/product.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="./image/product.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-md-8 data">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="text">
+                                    <h3>摘種農友</h3>
+                                    <p>果農：吳秀琴</p>
+                                    <p>果園：摩天嶺－琴</p>
+                                    <p>登記字號：7223</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="text-center">
+                                    <img src="https://cw1.tw/CW/images/article/C1440991163343.jpg" alt="農友照片">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <h3>商品規格</h3>
+                            <p>茂谷柑禮盒*12盒</p>
+                        </div>
+                        <div class="text">
+                            <h3>摘種農友</h3>
+                            <p>果農：吳秀琴</p>
+                            <p>果園：摩天嶺－琴</p>
+                            <p>登記字號：7223</p>
+                        </div>
+                        <div class="text">
+                            <h3>商品故障換貨</h3>
+                            <p>請填入聯絡資訊，將有專人會為您進行聯絡。</p>
+                            <form>
+                                <div class="form">
+                                    <label for="name">姓名：</label>
+                                    <input type="name" placeholder="請輸入姓名">
+                                </div>
+                                <div class="form">
+                                    <label for="tel">電話：</label>
+                                    <input type="tel" placeholder="請輸入電話">
+                                </div>
+                                <div class="form">
+                                    <label for="email">E-mail：</label>
+                                    <input type="email" placeholder="請輸入E-mail">
+                                </div>
+                                <div class="text-right"><button class="btn">送出</button></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="./js/imgLiquid-min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/ui.js"></script>
+    <script src="./js/wow.min.js"></script>
 </body>
 
 </html>

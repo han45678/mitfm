@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("./reset.css");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.7.2/css/all.css");
@@ -16,6 +17,65 @@ body {
   top: 0;
   left: 0;
   z-index: 9999;
+}
+
+#homeLoad {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #02281e;
+}
+
+#homeLoad .opening {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.slideUp {
+  -webkit-animation-name: slideUp;
+          animation-name: slideUp;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  visibility: visible !important;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
 img {
@@ -150,6 +210,41 @@ header .wrapper nav ul li.mobile_menu h3 {
   font-weight: initial;
 }
 
+header .wrapper nav ul li#searchBar {
+  margin: 0;
+  left: 0;
+  top: 150px;
+  position: fixed;
+  width: 100%;
+  background-color: #03a67b;
+  padding: 0 15px;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+header .wrapper nav ul li#searchBar input {
+  border: none;
+  width: 100%;
+  margin: 15px 0;
+  height: 40px;
+  padding: 0 15px;
+}
+
+header .wrapper nav ul li#searchBar button {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  position: absolute;
+  border: none;
+  background-color: transparent;
+}
+
+header .wrapper nav ul li#searchBar.active {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
 header .wrapper ol {
   width: 210px;
   text-align: center;
@@ -160,6 +255,7 @@ header .wrapper ol li {
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 45px;
+  cursor: pointer;
 }
 
 header .wrapper ol li a,
@@ -179,7 +275,8 @@ header .wrapper ol li#shopping-cart i {
 }
 
 header .wrapper ol li#shopping-cart .content {
-  display: none;
+  -webkit-transform: scale(0);
+          transform: scale(0);
   position: absolute;
   width: 320px;
   height: auto;
@@ -307,7 +404,76 @@ header .wrapper ol li#shopping-cart .content .go-shopping-cart button:hover {
 }
 
 header .wrapper ol li#shopping-cart.active .content {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+header .wrapper ol li#user {
+  position: relative;
+}
+
+header .wrapper ol li#user i {
+  cursor: pointer;
+}
+
+header .wrapper ol li#user .content {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  position: absolute;
+  width: 150px;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 15px;
+  right: -15px;
+}
+
+header .wrapper ol li#user .content::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 15px 20px 15px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.7) transparent;
+  position: absolute;
+  top: -20px;
+  right: 15px;
+}
+
+header .wrapper ol li#user .content a.noLogIn {
+  line-height: 40px;
+  border: 1px solid #fff;
   display: block;
+  display: none;
+}
+
+header .wrapper ol li#user .content ul {
+  text-align: left;
+}
+
+header .wrapper ol li#user .content ul li {
+  margin: 0;
+}
+
+header .wrapper ol li#user .content ul li a {
+  display: block;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+header .wrapper ol li#user .content ul li a i {
+  margin-right: 5px;
+  line-height: unset;
+}
+
+header .wrapper ol li#user.active .content {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+header .wrapper ol li#openSearchBar {
+  cursor: pointer;
 }
 
 header .wrapper button#menu {
@@ -324,6 +490,10 @@ header.active .wrapper a #logo {
 
 header.active .wrapper nav ul li {
   margin-top: 15px;
+}
+
+header.active .wrapper nav ul li#searchBar {
+  top: 90px;
 }
 
 header.active .wrapper ol li {
@@ -1239,6 +1409,63 @@ main #farmIntroduction .join #phoneLogin {
   display: none;
 }
 
+main #orderList {
+  border-top: 1px solid #ccc;
+  margin-top: 35px;
+  margin-bottom: 50px;
+}
+
+main #orderList ul li h3 {
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 50px;
+  background-color: #ccc;
+  padding: 0 15px;
+  margin-top: 15px;
+}
+
+main #orderList ul li h3 i {
+  margin-right: 15px;
+}
+
+main #orderList ul li h3 .orderNumber {
+  margin-left: 15px;
+  color: #03a67b;
+}
+
+main #orderList ul li table {
+  display: none;
+  text-align: center;
+  width: 100%;
+}
+
+main #orderList ul li table thead tr {
+  border-bottom: 1px solid #ccc;
+}
+
+main #orderList ul li table thead tr td {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 0;
+}
+
+main #orderList ul li table tbody tr td {
+  padding: 15px 0;
+}
+
+main #orderList ul li table tbody tr td a {
+  color: #03a67b;
+}
+
+main #orderList ul li.active h3 i {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+main #orderList ul li.active table {
+  display: table;
+}
+
 #userProducts {
   position: relative;
 }
@@ -2107,6 +2334,15 @@ main #farmIntroduction .join #phoneLogin {
   margin: 0 15px;
 }
 
+#shoppingList .wrapper #payment .delivery .content label input,
+#shoppingList .wrapper #payment .transfer .content label input,
+#checkout .wrapper #payment .delivery .content label input,
+#checkout .wrapper #payment .transfer .content label input {
+  margin-right: 5px;
+  position: relative;
+  top: -2.5px;
+}
+
 #shoppingList .wrapper #payment .transfer .content,
 #checkout .wrapper #payment .transfer .content {
   -ms-flex-wrap: wrap;
@@ -2243,6 +2479,139 @@ main #farmIntroduction .join #phoneLogin {
   color: #F22E48;
 }
 
+#loginProduct {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+#loginProduct .content {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 100px auto;
+  max-width: 1280px;
+  padding: 15px;
+}
+
+#loginProduct .content button#times {
+  background-color: transparent;
+  border: none;
+  font-size: 50px;
+  position: absolute;
+  top: -65px;
+  right: -50px;
+  color: #f22e48;
+}
+
+#loginProduct .content .photo {
+  border-right: 3px solid #02281D;
+}
+
+#loginProduct .content .photo pre {
+  font-size: 18px;
+  color: #4d4d4d;
+  margin-top: 15px;
+}
+
+#loginProduct .content .photo h2 {
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+#loginProduct .content .photo .slick {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#loginProduct .content .photo .slick .item {
+  width: 100%;
+  height: 320px;
+}
+
+#loginProduct .content .photo .slick .slick-dots {
+  text-align: center;
+  margin-top: 5px;
+}
+
+#loginProduct .content .photo .slick .slick-dots li {
+  margin: 0 5px;
+  display: inline;
+}
+
+#loginProduct .content .photo .slick .slick-dots li button {
+  background-color: transparent;
+  border: solid 3px #02281E;
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  border-radius: 180px;
+}
+
+#loginProduct .content .photo .slick .slick-dots li.slick-active button {
+  background-color: #02281E;
+}
+
+#loginProduct .content .data {
+  padding: 15px;
+}
+
+#loginProduct .content .data .text {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#loginProduct .content .data .text h3 {
+  font-size: 20px;
+  line-height: 50px;
+  color: #02281E;
+}
+
+#loginProduct .content .data .text p {
+  color: #747474;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+#loginProduct .content .data .text .form label {
+  width: 100%;
+  display: block;
+  margin-top: 30px;
+  font-weight: 14px;
+  color: #02281E;
+}
+
+#loginProduct .content .data .text .form input {
+  width: 100%;
+  padding: 0 15px;
+  border: none;
+  display: block;
+  border-bottom: 1px solid #02281E;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+#loginProduct .scrollBar {
+  height: calc(100% - 30px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#loginProduct.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 @media (max-width: 1199px) {
   .wrapper {
     margin-left: 30px;
@@ -2268,6 +2637,10 @@ main #farmIntroduction .join #phoneLogin {
     margin-top: 15px;
     margin-left: 5px;
     margin-right: 5px;
+  }
+  header .wrapper nav ul li#searchBar {
+    left: 0;
+    top: 90px;
   }
   header .wrapper ol {
     position: fixed;
@@ -2306,6 +2679,36 @@ main #farmIntroduction .join #phoneLogin {
     right: -20px;
     border-width: 15px 0 15px 20px;
     border-color: transparent transparent transparent rgba(0, 0, 0, 0.7);
+  }
+  header .wrapper ol li#user {
+    position: relative;
+  }
+  header .wrapper ol li#user i {
+    cursor: pointer;
+  }
+  header .wrapper ol li#user .content {
+    top: 0;
+    right: 75px;
+  }
+  header .wrapper ol li#user .content::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 0 15px 20px;
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 10px;
+    right: -20px;
+  }
+  header .wrapper ol li#user .content ul {
+    text-align: left;
+  }
+  header .wrapper ol li#user .content ul li {
+    background-color: transparent;
+  }
+  header .wrapper ol li#user.active .content {
+    display: block;
   }
   footer .wrapper {
     padding: 50px 15px;
@@ -2524,6 +2927,64 @@ main #farmIntroduction .join #phoneLogin {
   main .products .wrapper .memberForm label {
     text-align: left;
   }
+  #loginProduct .content {
+    margin: 150px 50px;
+  }
+  #loginProduct .content .photo {
+    border-right: 3px solid #02281D;
+  }
+  #loginProduct .content .photo pre {
+    font-size: 16px;
+    color: #4d4d4d;
+    margin-top: 15px;
+  }
+  #loginProduct .content .photo h2 {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+  #loginProduct .content .photo .slick {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #loginProduct .content .photo .slick .item {
+    width: 100%;
+    height: 180px;
+  }
+  #loginProduct .content .photo .slick .slick-dots {
+    text-align: center;
+    margin-top: 5px;
+  }
+  #loginProduct .content .photo .slick .slick-dots li {
+    margin: 0 5px;
+    display: inline;
+  }
+  #loginProduct .content .photo .slick .slick-dots li button {
+    background-color: transparent;
+    border: solid 3px #02281E;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    border-radius: 180px;
+  }
+  #loginProduct .content .photo .slick .slick-dots li.slick-active button {
+    background-color: #02281E;
+  }
+  #loginProduct .content .data .text {
+    margin-top: 0;
+  }
+  #loginProduct .content .data .text h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  #loginProduct .content .data .text p {
+    line-height: 20px;
+  }
+  #loginProduct .scrollBar {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 }
 
 @media (max-width: 992px) {
@@ -2629,6 +3090,15 @@ main #farmIntroduction .join #phoneLogin {
   }
   header .wrapper nav ul li.mobile_menu.active ul {
     display: block;
+  }
+  header .wrapper nav ul li#searchBar {
+    margin: 0;
+    left: 0;
+    top: 0;
+    position: relative;
+    width: 100%;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
   header .wrapper button#menu {
     background-color: transparent;
@@ -2786,6 +3256,35 @@ main #farmIntroduction .join #phoneLogin {
   header .wrapper ol li#shopping-cart.active .content {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+  header .wrapper ol li#user {
+    position: relative;
+  }
+  header .wrapper ol li#user i {
+    cursor: pointer;
+  }
+  header .wrapper ol li#user .content {
+    top: -15px;
+    right: unset;
+    left: 65px;
+  }
+  header .wrapper ol li#user .content::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 20px 15px 0;
+    border-color: transparent rgba(0, 0, 0, 0.8) transparent transparent;
+    position: absolute;
+    top: 15px;
+    right: unset;
+    left: -20px;
+  }
+  header .wrapper ol li#user.active .content {
+    display: block;
+  }
+  header .wrapper ol li#openSearchBar {
+    display: none;
   }
   header .wrapper ol.active {
     left: 15px;
@@ -3130,6 +3629,93 @@ main #farmIntroduction .join #phoneLogin {
   main #memberProfile .wrapper .memberForm input,
   main .products .wrapper .memberForm input {
     margin-bottom: 10px;
+  }
+  main #orderList {
+    margin-top: 50px;
+    padding-top: 35px;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  main #orderList::before {
+    content: '訂單列表';
+    position: absolute;
+    top: -9px;
+    font-size: 18px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background-color: #fff;
+    padding: 0 10px;
+    font-weight: bold;
+  }
+  main #orderList ul li h3 {
+    font-size: 14px;
+    padding: 0 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  main #orderList ul li h3 i {
+    margin-right: 5px;
+  }
+  main #orderList ul li h3 .orderNumber {
+    margin-left: 5px;
+  }
+  main #orderList ul li table {
+    display: none;
+    text-align: center;
+    width: 100%;
+  }
+  main #orderList ul li table thead {
+    display: none;
+  }
+  main #orderList ul li table tbody tr {
+    border: 1px solid #ccc;
+  }
+  main #orderList ul li table tbody tr td {
+    padding: 10px 10px;
+    text-align: left;
+    float: left;
+    width: 100%;
+  }
+  main #orderList ul li table tbody tr td::before {
+    content: attr(data-th) " : ";
+  }
+}
+
+@media (max-width: 767px) {
+  #loginProduct .content {
+    margin: 80px 15px;
+  }
+  #loginProduct .content button#times {
+    top: -70px;
+    right: -10px;
+  }
+  #loginProduct .content .photo {
+    border-right: none;
+  }
+  #loginProduct .content .photo pre {
+    font-size: 16px;
+    color: #4d4d4d;
+    margin-top: 15px;
+  }
+  #loginProduct .content .photo h2 {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+  #loginProduct .content .photo .slick {
+    width: 230px;
+  }
+  #loginProduct .content .photo .slick .item {
+    height: 230px;
+  }
+  #loginProduct .content .data .text {
+    margin-top: 25px;
+  }
+  #loginProduct .scrollBar {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 }
 
