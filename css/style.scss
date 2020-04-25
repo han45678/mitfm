@@ -742,8 +742,9 @@ main {
         }
 
         #sponsor {
-            background-image: url(../image/sponsor.jpg);
+            background-image: url(https://scontent.frmq2-1.fna.fbcdn.net/v/t1.0-9/72272873_2522249737851576_7262216654409433088_n.jpg?_nc_cat=110&_nc_sid=b9115d&_nc_ohc=4Hg683DCt9EAX_bnfOu&_nc_ht=scontent.frmq2-1.fna&oh=a9a58c0b0fd2a88d9689a4e341379b4b&oe=5EC8BCCD);
             background-size: cover;
+            background-position: center;
             position: relative;
 
             &::after {

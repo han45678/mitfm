@@ -109,7 +109,7 @@ $(document).ready(function () {
     $("#loginProduct .item,#trackingList .photo,#farmIntroduction #banner,#shoppingList .photo,#new .photo,#product .photo .item,#banner .item .photo,#popular_products .photo,#activity .photo,.products .photo,#farmIntroduction #bigPicture .item,#userProducts .photo,#shopping-cart .photo").imgLiquid({
         fill: true,
         horizontalAlign: "center",
-        verticalAlign: "top"
+        verticalAlign: "center"
     });
     $('#home #banner').slick({ //首頁banner
         dots: false,
